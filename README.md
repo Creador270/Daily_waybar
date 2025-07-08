@@ -88,10 +88,10 @@ GITHUB_PAT=ghp_yourGeneratedTokenHere
 ### 4. Install Python Dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -r requests datetime json OrderedDict dotenv
 ```
 > Requires Python 3.7 or higher.
-> Dependencies: `requests`, `python-dotenv`
+> Dependencies: `requests`, `python-dotenv`, `json`, `datetime`, `OrderedDict`
 
 ---
 > Ensure the script is executable:
