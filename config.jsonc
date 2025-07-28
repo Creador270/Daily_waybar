@@ -23,6 +23,8 @@
   "modules-center": [
     "custom/paddc",
     "custom/left2",
+    "keyboard-state",       // caps lock
+    "custom/arch_news",     // arch news
     "custom/temperature",   // temperature
 
     "custom/left3",
@@ -194,6 +196,30 @@
       // ─────────────────────────────────────────────────────────── system ───
       "Authenticate": "  Authenticate"
     }
+  },
+  
+  // ────────────────────────────────────────────────────────┤ caps lock ├───
+  
+  "keyboard-state": {
+    "capslock": true,
+    "numlock": false,
+    "scrolllock": false,
+    "format": " {icon} ",
+    "format-icons": {
+        "locked": "󰪛",
+        "unlocked": ""
+    }
+  },
+
+  // ────────────────────────────────────────────────────────┤ arch news ├───
+  
+  "custom/arch_news": {
+    "format": "󱀂 {}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/arch_news 14",
+    "tooltip": true,
+    "interval": 3600,
+    "on-click": "xdg-open https://archlinux.org/news/"
   },
 
   // ────────────────────────────────────────────────────────┤ temperature ├───
@@ -390,6 +416,7 @@
 
     "tooltip-format": "Device: {desc}",
     "on-click": "~/.config/waybar/scripts/volume-control.sh -o m",
+    "on-click-right": "pavucontrol",
     "on-scroll-up": "~/.config/waybar/scripts/volume-control.sh -o i",
     "on-scroll-down": "~/.config/waybar/scripts/volume-control.sh -o d",
     "min-length": 6,

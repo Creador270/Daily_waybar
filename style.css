@@ -40,6 +40,8 @@ tooltip label {
 #custom-theme,
 #workspaces,
 #window,
+#keyboard-state,
+#custom-arch_news,
 #custom-temperature,
 #memory,
 #cpu,
@@ -136,7 +138,7 @@ tooltip label {
   margin-bottom: 0;
 }
 
-/* ──────────────────────────────────────────────────────────┤ temperature ├───
+/* ──────────────────────────────────────────────────────────┤ left header ├───
 */
 #custom-paddc {
   padding-right: 22px;
@@ -148,6 +150,31 @@ tooltip label {
   padding-left: 3px;
 }
 
+/* ────────────────────────────────────────────────────────────────┤ caps lock ├───
+*/
+#keyboard-state {
+  background: @tray;
+  padding: 0 8px 0 5px;
+}
+
+#keyboard-state:hover {
+  color: @hover-fg;
+}
+
+
+/* ────────────────────────────────────────────────────────────────┤ arch news ├───
+*/
+#custom-arch_news {
+  background: @tray;
+  padding: 0 8px 0 5px;
+}
+
+#custom-arch_news:hover {
+  color: @hover-fg;
+}
+
+/* ──────────────────────────────────────────────────────────┤ temperature ├───
+*/
 #custom-temperature {
   background: @temperature;
   padding: 0 0 0 1px;
